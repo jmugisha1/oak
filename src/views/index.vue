@@ -68,33 +68,14 @@ import footerr from '@/components/footerr.vue'
         </p>
       </div>
 
-      <div class="about-pateners-wrpp">
-        <div class="about-pateners">
-          <div class="slider">
-            <img src="../assets/photography/edcl.png" alt="" class="about-pateners-logos" />
-          </div>
-          <div class="slider">
-            <img src="../assets/photography/giz.png" alt="" class="about-pateners-logos" />
-          </div>
-          <div class="slider">
-            <img src="../assets/photography/reg.png" alt="" class="about-pateners-logos" />
-          </div>
-          <div class="slider">
-            <img src="../assets/photography/rssb.png" alt="" class="about-pateners-logos" />
-          </div>
-          <div class="slider">
-            <img src="../assets/photography/snv.png" alt="" class="about-pateners-logos" />
-          </div>
-          <div class="slider">
-            <img src="../assets/photography/ssm.png" alt="" class="about-pateners-logos" />
-          </div>
-          <div class="slider">
-            <img src="../assets/photography/endev.png" alt="" class="about-pateners-logos" />
-          </div>
-          <div class="slider">
-            <img src="../assets/photography/unhcr.png" alt="" class="about-pateners-logos" />
-          </div>
-        </div>
+      <div class="about-pateners">
+        <img src="../assets/photography/edcl.png" alt="" class="about-pateners-logos" />
+        <img src="../assets/photography/giz.png" alt="" class="about-pateners-logos" />
+        <img src="../assets/photography/reg.png" alt="" class="about-pateners-logos" />
+        <img src="../assets/photography/rssb.png" alt="" class="about-pateners-logos" />
+        <img src="../assets/photography/ssm.png" alt="" class="about-pateners-logos" />
+        <img src="../assets/photography/endev.png" alt="" class="about-pateners-logos" />
+        <img src="../assets/photography/unhcr.png" alt="" class="about-pateners-logos" />
       </div>
     </section>
     <section class="se-products">
@@ -218,14 +199,6 @@ import footerr from '@/components/footerr.vue'
   font-family: popins-bold;
   src: url(../assets/fonts/Poppins-Bold.ttf);
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250 * 7));
-  }
-}
 
 @media (max-width: 1024px) {
   .se-hero {
@@ -322,11 +295,12 @@ import footerr from '@/components/footerr.vue'
       display: flex;
       justify-content: space-between;
       width: 100%;
+      flex-wrap: wrap;
 
       .about-pateners-logos {
         object-fit: cover;
         height: 40px;
-        /* width: 48px; */
+        width: auto;
       }
     }
   }
@@ -564,13 +538,12 @@ import footerr from '@/components/footerr.vue'
   .se-about {
     display: flex;
     flex-direction: column;
-    padding: 32px 0;
+    padding: 32px 112px;
     height: calc(100vh - 71px);
     margin-top: 71px;
 
     .about-wrapper {
       height: 60vh;
-      padding: 0 112px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -586,24 +559,14 @@ import footerr from '@/components/footerr.vue'
       }
     }
 
-    .about-pateners-wrpp {
-      .about-pateners {
-        display: flex;
-        width: calc(200 * 14);
-        animation: scroll 30s infinite;
-
-        .slider {
-          position: relative;
-          overflow: hidden;
-          height: 56px;
-          width: auto;
-
-          .about-pateners-logos {
-            margin-left: 64px;
-            object-fit: cover;
-          }
-        }
-      }
+    .about-pateners {
+      display: flex;
+      gap: 54px;
+      .about-pateners-logos {
+        height: 54px ;
+        object-fit: cover;
+        width: auto;
+          }    
     }
   }
 
