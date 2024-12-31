@@ -19,12 +19,12 @@
       <router-link to="/contact">featured</router-link>
     </div>
 
-    <div class="nav_book">book a call</div>
+    <button class="buttons-fill">book a call</button>
   </nav>
 </template>
 
 <style scoped>
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -57,17 +57,9 @@
     .nav_links {
       display: none;
     }
-
-    .nav_book {
-      background-color: #9aba90;
-      color: white;
-      font-size: 18px;
-      padding: 8px 16px;
-      border-radius: 8px;
-    }
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -107,14 +99,6 @@
         text-transform: uppercase;
         cursor: pointer;
       }
-    }
-
-    .nav_book {
-      background-color: #9aba90;
-      color: white;
-      font-size: 18px;
-      padding: 8px 16px;
-      border-radius: 8px;
     }
   }
 }

@@ -33,21 +33,12 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-:root {
-  /* TYPOGRAPHY */
-  --button: clamp(0.625rem, 0.625rem + 0vw, 0.625rem);
-  --base-small: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-  --base-big: clamp(0.875rem, 0.7813rem + 0.4688vw, 1.25rem);
-  --title-big: clamp(3.75rem, 2.0313rem + 8.5938vw, 10.625rem);
-
-  /* SPACING */
-
-  /* PADDING */
-  --padding: clamp(0.5rem, 0.375rem + 0.625vw, 1rem);
-}
-
 @font-face {
   font-family: popins;
   src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: popins-bold;
+  src: url(../assets/fonts/Poppins-Bold.ttf);
 }

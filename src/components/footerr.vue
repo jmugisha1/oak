@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="se-contacts">
+  <section class="se-contacts se-uni-dskt se-uni-mobo">
     <h1 class="contacts-4">
       <span>Contacts</span><br />
       Have a chat with us<br />
@@ -35,13 +35,14 @@
         <label for="message">message</label>
         <input id="message" type="text" />
       </div>
-      <button>Send</button>
+      <button class="buttons-fill">Send</button>
     </form>
   </section>
 
-  <section class="se-footer">
+  <section class="se-footer se-uni-dskt se-uni-mobo">
     <div class="footer-header">
-      <div class="logo">
+      <div class="footer-logo">
+        <img src="../assets/icons/logo.svg" alt="" class="nav_logo" />
         <p>
           Oak<br />
           Investments<br />
@@ -50,8 +51,15 @@
       </div>
 
       <form action="/search" method="GET" class="search">
-        <input type="search" name="query" placeholder="Search..." />
-        <button type="submit">icon</button>
+        <input
+          type="search"
+          name="query"
+          placeholder="Search..."
+          class="input"
+        />
+        <button type="submit" class="submit">
+          <img src="../assets/icons/search.svg" alt="" />
+        </button>
       </form>
     </div>
 
@@ -63,36 +71,77 @@
         </p>
         <a href=""> oakinvestmentrwanda@gmail.com </a>
       </div>
-      <div class="footer-links-outer">
-        <div class="links-outer">
-          <p>social media</p>
-          <a href="">instagram</a>
-          <a href="">facebook</a>
-          <a href="">linked</a>
-        </div>
-        <div class="links-outer">
-          <p>social media</p>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Services</a>
-          <a href="">Products</a>
-          <a href="">Featured</a>
-          <a href="">Contact Us</a>
-        </div>
+
+      <div class="footer-links">
+        <p>social media</p>
+        <a href="" class="links-underline">instagram</a>
+        <a href="" class="links-underline">facebook</a>
+        <a href="" class="links-underline">linked</a>
+      </div>
+      <div class="footer-links">
+        <p>social media</p>
+        <a href="" class="links-underline">Home</a>
+        <a href="" class="links-underline">About</a>
+        <a href="" class="links-underline">Services</a>
+        <a href="" class="links-underline">Products</a>
+        <a href="" class="links-underline">Featured</a>
+        <a href="" class="links-underline">Contact Us</a>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-@media (max-width: 768px) {
-  .se-contacts {
+/*  */
+.se-footer {
+  .footer-header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .footer-logo {
+      width: fit-content;
+      display: flex;
+      gap: 16px;
+      p {
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+      .nav_logo {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  }
+
+  .search {
+    width: 50%;
+    padding: 8px 16px;
+    background-color: #427656;
+    height: fit-content;
+    border-radius: 32px;
+    display: flex;
+    /* justify-content: space-between; */
+
+    .input {
+      color: #ffffff;
+      width: fit-content;
+    }
+
+    .submit {
+      img {
+        filter: brightness(0) saturate(100%) invert(97%) sepia(5%)
+          saturate(298%) hue-rotate(311deg) brightness(118%) contrast(100%);
+        height: 20px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .se-contacts {
     flex-direction: column;
-    gap: 72px;
-    padding: 16px;
-    gap: 72px;
-    margin-top: 71px;
 
     .contacts-4 {
       font-family: popins-bold;
@@ -140,44 +189,14 @@
           border-bottom: 1px solid black;
         }
       }
-
-      button {
-        background-color: #427656;
-        color: white;
-        padding: 8px 16px;
-        border-radius: 32px;
-        width: fit-content;
-      }
     }
   }
 
   .se-footer {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 16px;
-    gap: 72px;
-    margin-top: 71px;
     background-color: #0f301b;
     color: white;
-
-    .footer-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-
-      .search {
-        padding: 8px 16px;
-        background-color: #427656;
-        height: fit-content;
-        border-radius: 32px;
-
-        input {
-          color: #ffffff;
-        }
-      }
-    }
 
     .footer-links {
       display: flex;
@@ -190,30 +209,15 @@
         flex-direction: column;
         gap: 16px;
       }
-
-      .footer-links-outer {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        .links-outer {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-        }
-      }
     }
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .se-contacts {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 32px 112px;
     gap: 72px;
-    height: calc(100vh - 71px);
-    margin-top: 71px;
+
     .contacts-4 {
       font-family: popins-bold;
       font-size: 32px;
@@ -263,16 +267,6 @@
           border-bottom: 1px solid black;
         }
       }
-
-      button {
-        background-color: #0c4f26;
-        color: white;
-        padding: 4px 48px;
-        border-radius: 8px;
-        width: fit-content;
-        text-transform: uppercase;
-        font-size: 18px;
-      }
     }
   }
 
@@ -280,29 +274,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 32px 112px;
     gap: 72px;
-    height: calc(100vh - 71px);
-    margin-top: 71px;
     background-color: #0f301b;
     color: white;
-
-    .footer-header {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-
-      .search {
-        padding: 8px 16px;
-        background-color: #427656;
-        height: fit-content;
-        border-radius: 32px;
-
-        input {
-          color: #ffffff;
-        }
-      }
-    }
 
     .footer-links {
       display: flex;
@@ -313,24 +287,6 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-      }
-
-      .footer-links-outer {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-
-        .links-outer {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-
-          a {
-            font-size: 16px;
-            text-transform: uppercase;
-            text-decoration: underline;
-          }
-        }
       }
     }
   }
