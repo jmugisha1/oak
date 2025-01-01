@@ -31,7 +31,7 @@
     align-items: center;
     margin-bottom: 1px solid #333;
     color: #333;
-    padding: 32px;
+    padding: 16px 32px;
     border-bottom: 0.75px solid rgb(0, 0, 0, 0.75);
     width: 100%;
     top: 0;

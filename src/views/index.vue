@@ -309,6 +309,23 @@ import footerr from "@/components/footerr.vue";
 
 <style scoped>
 /*  */
+.hero-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .hero-sub-heading-green {
+    color: #0c4f26;
+  }
+  .hero-main-heading {
+    font-family: popins-bold;
+    font-size: clamp(1.375rem, 1.0938rem + 1.4063vw, 2.5rem);
+    span {
+      color: #0c4f26;
+    }
+  }
+}
+/*  */
 
 .hero-rating {
   display: flex;
@@ -326,9 +343,6 @@ import footerr from "@/components/footerr.vue";
     align-items: center;
     border-left: 1px solid rgb(0, 0, 0, 0.5);
 
-    h3 {
-      font-family: popins-bold;
-    }
     .hero-rating-stars {
       display: flex;
       gap: 8px;
@@ -378,25 +392,14 @@ import footerr from "@/components/footerr.vue";
       width: 100%;
       justify-content: flex-end;
       padding: 32px 0;
-
-      .hero-heading {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        .hero-sub-heading-green {
-          color: #0c4f26;
-        }
-        .hero-main-heading {
-          font-family: popins-bold;
-          font-size: 40px;
-          span {
-            color: #0c4f26;
-          }
-        }
-      }
     }
 
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
     .hero-img-wrppr {
       width: 100%;
       padding: 0 32px;
@@ -414,12 +417,7 @@ import footerr from "@/components/footerr.vue";
     .about-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 32px;
-
-      .about-heading {
-        font-family: popins-bold;
-        font-size: 40px;
-      }
+      gap: 72px;
     }
 
     .about-pateners {
@@ -432,6 +430,7 @@ import footerr from "@/components/footerr.vue";
         object-fit: cover;
         height: 40px;
         width: auto;
+        margin-top: 32px;
       }
     }
   }
@@ -546,23 +545,6 @@ import footerr from "@/components/footerr.vue";
       width: 50%;
       justify-content: flex-end;
       padding: 32px 0;
-
-      .hero-heading {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        .hero-sub-heading-green {
-          color: #0c4f26;
-        }
-        .hero-main-heading {
-          font-family: popins-bold;
-          font-size: 40px;
-          span {
-            color: #0c4f26;
-          }
-        }
-      }
     }
 
     .hero-img-wrppr {
@@ -684,12 +666,15 @@ import footerr from "@/components/footerr.vue";
 
   .se-featured {
     flex-direction: column;
+    gap: 72px;
+    height: fit-content;
 
     .featured-main {
       display: flex;
       gap: 32px;
+      height: fit-content;
       .featured-wrapper {
-        height: 80vh;
+        height: 100vh;
         width: 100%;
         border: 1px solid #0c4f26;
         overflow: hidden;
